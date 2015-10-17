@@ -1,0 +1,48 @@
+hello-javascript
+====
+
+A simple JavaScript module that demonstrates how to write a JavaScript library that can be published in various formats (AMD, UMD, CommonJS, ES6 modules, globals) and to various repositories (npm, Bower, jspm).
+
+All this module does is export a function that prints out `"hello javascript!"`.
+
+Usage
+---
+
+### npm
+
+
+```
+npm install hello-javascript
+```
+
+Then you can browserify/Webpack using `require('hello-javascript')`, or you can include it directly as a `<script>` tag via the `dist/hello-javascript.js` file. For Rollup, it uses a `"jsnext:main"` field, so you can directly include the ES6 source.
+
+### Direct download
+
+Download either the unminified `hello-javascript.js` file or the minified `hello-javascript.min.js` file from the [Github releases page](https://github.com/nolanlawson/hello-javascript/releases).
+
+### Bower
+
+```
+bower install hello-javascript
+```
+
+Then use the `dist/hello-javascript.js` as a `<script>` tag inside your HTML page.
+
+### jspm
+
+```
+jspm install hello-javascript
+```
+
+Then you can use `dist/hello-javascript.js`.
+
+Why?
+---
+
+Writing JavaScript libraries has become complicated. I'm hoping this repository can serve as a [Rosetta Stone](https://en.wikipedia.org/wiki/Rosetta_Stone) so that newbie JavaScript authors have an idea of how to build their code for distribution in various channels.
+
+Missing somehing?
+-----
+
+Open a pull request! I'm sure there is some exotic publishing mechanism that I forgot about. :)

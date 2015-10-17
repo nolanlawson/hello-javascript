@@ -1,0 +1,29 @@
+{
+  "name": "hello-javascript",
+  "version": "1.0.0",
+  "description": "Demo of a JavaScript module that supports many publishing options",
+  "author": "Nolan Lawson <nolan@nolanlawson.com>",
+  "license": "Apache-2.0",
+  "repository": "https://github.com/nolanlawson/hello-javascript.git",
+  "main": "dist-node/index.js",
+  "jsnext:main": "src/index.js",
+  "jspm": {
+    "main": "dist/hello-javascript.js"
+  },
+  "scripts": {
+    "build-node": "babel src --out-dir dist-node",
+    "build-browser": "npm run browserify && npm run uglify",
+    "browserify": "browserify --standalone helloJavascript dist-node > dist/hello-javascript.js",
+    "uglify": "uglifyjs -mc < dist/hello-javascript.js > dist/hello-javascript.min.js",
+    "clean": "rimraf dist dist-node && mkdirp dist dist-node",
+    "build": "npm run clean && npm run build-node && npm run build-browser",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "browserify": "^11.2.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.4.3",
+    "uglify-js": "^2.5.0"
+  }
+}

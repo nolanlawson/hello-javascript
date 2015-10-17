@@ -1,0 +1,21 @@
+{
+  "name": "hello-javascript",
+  "version": "1.0.0",
+  "authors": [
+    "Nolan Lawson <nolan@nolanlawson.com>"
+  ],
+  "description": "Demo of a JavaScript module that supports many publishing options",
+  "main": "dist/hello-javascript.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/nolanlawson/hello-javascript",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
