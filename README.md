@@ -5,7 +5,7 @@ A simple JavaScript module that demonstrates how to write a JavaScript library t
 
 All this module does is export a function that prints out `"hello javascript!"`.
 
-Usage
+Usage for users
 ---
 
 ### npm
@@ -36,6 +36,22 @@ jspm install hello-javascript
 ```
 
 Then you can use `dist/hello-javascript.js`.
+
+Usage for library authors
+----
+
+### Building
+
+`npm run build` will build the Node-ready and browser-ready versions, which are written to the `dist-node` and `dist` directories.
+
+
+### Publishing
+
+First, run `npm run build`, then `git commit` the built files. (Yes, we're checking the built files into Git for the benefit of Github and Bower.)
+
+Then do `npm version patch|minor|major` to create the npm version as well as the Git tag. Then `git push origin master --tags`, run `npm publish`, and you're good to go!
+
+For Bower, you will also need to register your module using the [steps described here](http://bower.io/docs/creating-packages/).
 
 Why?
 ---
