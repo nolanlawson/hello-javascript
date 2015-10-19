@@ -1,6 +1,6 @@
 {
   "name": "hello-javascript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Demo of a JavaScript module that supports many publishing options",
   "author": "Nolan Lawson <nolan@nolanlawson.com>",
   "license": "Apache-2.0",
