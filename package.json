@@ -13,7 +13,7 @@
   "scripts": {
     "build-node": "babel src --out-dir dist-node",
     "build-browser": "npm run browserify && npm run uglify",
-    "browserify": "browserify --standalone helloJavascript dist-node > dist/hello-javascript.js",
+    "browserify": "browserify --standalone helloJavascript dist-node | derequire > dist/hello-javascript.js",
     "uglify": "uglifyjs -mc < dist/hello-javascript.js > dist/hello-javascript.min.js",
     "clean": "rimraf dist dist-node && mkdirp dist dist-node",
     "build": "npm run clean && npm run build-node && npm run build-browser",
@@ -22,6 +22,7 @@
   "devDependencies": {
     "babel": "^5.8.23",
     "browserify": "^11.2.0",
+    "derequire": "^2.0.2",
     "mkdirp": "^0.5.1",
     "rimraf": "^2.4.3",
     "uglify-js": "^2.5.0"
