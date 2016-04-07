@@ -5,17 +5,38 @@ A simple JavaScript module that demonstrates how to write a JavaScript library t
 
 All this module does is export a function that prints out `"hello javascript!"`.
 
-Usage for users
+Instructions for module authors
+----
+
+### Building
+
+`npm run build` will build the Node-ready and browser-ready versions, which are written to the `dist-node` and `dist` directories.
+
+
+### Publishing
+
+First, run `npm run build`, then `git commit` the built files. (Yes, we're checking the built files into Git for the benefit of Github and Bower.)
+
+Then do `npm version patch|minor|major` to create the npm version as well as the Git tag. Then `git push origin master --tags`, run `npm publish`, and you're good to go!
+
+For Bower, you will also need to register your module using the [steps described here](http://bower.io/docs/creating-packages/).
+
+Instructions for module users
 ---
+
+_Module authors: copy-paste these instructions when you publish. This module is not actually published anywhere._
+
+You can install this module in a variety of ways:
 
 ### npm
 
+On the command line, run:
 
 ```
 npm install hello-javascript
 ```
 
-Then you can browserify/Webpack using `require('hello-javascript')`, or you can include it directly as a `<script>` tag via the `dist/hello-javascript.js` file. For Rollup, it uses a `"jsnext:main"` field, so you can directly include the ES6 source.
+Then you can build with Browserify/Webpack using `require('hello-javascript')`, or you can include it directly as a `<script>` tag via the `dist/hello-javascript.js` file. For Rollup users, it uses a `"jsnext:main"` field, so you can directly include the ES6 source.
 
 ### Direct download
 
@@ -36,22 +57,6 @@ jspm install hello-javascript
 ```
 
 Then you can use `dist/hello-javascript.js`.
-
-Usage for library authors
-----
-
-### Building
-
-`npm run build` will build the Node-ready and browser-ready versions, which are written to the `dist-node` and `dist` directories.
-
-
-### Publishing
-
-First, run `npm run build`, then `git commit` the built files. (Yes, we're checking the built files into Git for the benefit of Github and Bower.)
-
-Then do `npm version patch|minor|major` to create the npm version as well as the Git tag. Then `git push origin master --tags`, run `npm publish`, and you're good to go!
-
-For Bower, you will also need to register your module using the [steps described here](http://bower.io/docs/creating-packages/).
 
 Why?
 ---
