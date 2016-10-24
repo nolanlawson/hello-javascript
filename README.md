@@ -63,7 +63,7 @@ Why?
 
 Writing JavaScript libraries has become complicated. I'm hoping this repository can serve as a [Rosetta Stone](https://en.wikipedia.org/wiki/Rosetta_Stone) so that newbie JavaScript authors have an idea of how to build their code for distribution in various channels.
 
-Missing somehing?
+Missing something?
 -----
 
 Open a pull request! I'm sure there is some exotic publishing mechanism that I forgot about. :)
