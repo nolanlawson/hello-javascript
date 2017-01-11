@@ -10,7 +10,7 @@ Instructions for module authors
 
 ### Building
 
-`npm run build` will build the Node-ready and browser-ready versions, which are written to the `dist-node` and `dist` directories.
+`npm run build` or `yarn build` will build the Node-ready and browser-ready versions, which are written to the `dist-node` and `dist` directories.
 
 
 ### Publishing
@@ -36,6 +36,13 @@ On the command line, run:
 npm install hello-javascript
 ```
 
+### yarn
+
+```
+  yarn add hello-javascript
+  yarn
+```
+  
 Then you can build with Browserify/Webpack using `require('hello-javascript')`, or you can include it directly as a `<script>` tag via the `dist/hello-javascript.js` file. For Rollup users, it uses a `"jsnext:main"` field, so you can directly include the ES6 source.
 
 ### Direct download
