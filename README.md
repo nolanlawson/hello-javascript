@@ -36,11 +36,10 @@ On the command line, run:
 npm install hello-javascript
 ```
 
-### yarn
+Or for yarn:
 
 ```
-  yarn add hello-javascript
-  yarn
+yarn add hello-javascript
 ```
   
 Then you can build with Browserify/Webpack using `require('hello-javascript')`, or you can include it directly as a `<script>` tag via the `dist/hello-javascript.js` file. For Rollup users, it uses a `"jsnext:main"` field, so you can directly include the ES6 source.
